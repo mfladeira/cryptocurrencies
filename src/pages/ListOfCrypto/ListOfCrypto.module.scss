@@ -1,0 +1,24 @@
+.ListOfCrypto {
+    .ul {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .tableHeader {
+        display: flex;
+        font-size: 14px;
+        color: rgb(219, 219, 219);
+        margin: 10px 0;
+        padding: 0 14px;
+
+        .firstColumn {
+            width: 50%;
+        }
+
+        .secondColumn,
+        .thirdColumn {
+            width: 25%;
+            text-align: right;
+        }
+    }
+}
