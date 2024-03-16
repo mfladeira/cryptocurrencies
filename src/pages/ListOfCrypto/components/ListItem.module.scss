@@ -10,6 +10,10 @@
     }
 
     .firstColumn {
+        width: 10%;
+    }
+
+    .secondColumn {
         width: 50%;
         display: flex;
         align-items: center;
@@ -17,7 +21,7 @@
         .symbol {
             font-weight: 500;
             font-size: 17px;
-            padding-left: 10px;
+            // padding-left: 10px;
         }
 
         .nameOfCurrency {
@@ -28,9 +32,9 @@
         }
     }
 
-    .secondColumn,
-    .thirdColumn {
-        width: 25%;
+    .thirdColumn,
+    .fourthColumn {
+        width: 20%;
         text-align: right;
         font-weight: 500;
     }

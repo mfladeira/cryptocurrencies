@@ -12,12 +12,16 @@
         padding: 0 14px;
 
         .firstColumn {
+            width: 10%;
+        }
+
+        .secondColumn {
             width: 50%;
         }
 
-        .secondColumn,
-        .thirdColumn {
-            width: 25%;
+        .thirdColumn,
+        .fourthColumn {
+            width: 20%;
             text-align: right;
         }
     }
