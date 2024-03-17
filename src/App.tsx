@@ -1,12 +1,9 @@
-import styles from './App.module.scss'
-import ListOfCrypto from './pages/ListOfCrypto/ListOfCrypto'
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+import './App.module.scss';
 
 function App() {
-  return (
-    <main className={styles.mainApp}>
-      <ListOfCrypto />
-    </main>
-  )
+	return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
