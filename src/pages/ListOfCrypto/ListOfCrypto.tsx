@@ -38,14 +38,7 @@ const ListOfCrypto = () => {
 					<div className={styles.thirdColumn}>Preço</div>
 					<div className={styles.fourthColumn}>Ações</div>
 				</li>
-				{!loading &&
-					cryptoTop10.map((item) => (
-						<ListItem
-							key={item.id}
-							{...item}
-							// imgSrc={reactIcon}
-						/>
-					))}
+				{!loading && cryptoTop10.map((item) => <ListItem key={item.id} {...item} />)}
 			</ul>
 		</div>
 	);

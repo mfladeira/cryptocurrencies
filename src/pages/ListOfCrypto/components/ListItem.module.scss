@@ -1,5 +1,6 @@
 .ListItem {
     display: flex;
+    align-items: center;
     color: rgb(219, 219, 219);
     padding: 20px 14px;
     cursor: pointer;
@@ -48,6 +49,28 @@
         &:hover {
             opacity: .3;
             transition: .2s;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .ListItem {
+        .containerText {
+            display: flex;
+            flex-direction: column;
+
+            .nameOfCurrency {
+                padding-left: 10px;
+                line-height: 13px;
+            }
+        }
+
+        .thirdColumn {
+            width: 30%;
+        }
+
+        .firstColumn {
+            width: 15%;
         }
     }
 }

@@ -5,13 +5,13 @@ import { CryptoCurrency } from "../../../interfaces/CryptoCurrency";
 const ListItem = (props: CryptoCurrency) => {
 	return (
 		<li className={styles.ListItem}>
-			<div className={styles.firstColumn}>
-				{props.market_cap_rank}
-			</div>
+			<div className={styles.firstColumn}>{props.market_cap_rank}</div>
 			<div className={styles.secondColumn}>
 				<img src={props.image} alt={props.image} width={28} height={28} />
-				<span className={styles.symbol}>{props.symbol}</span>
-				<span className={styles.nameOfCurrency}>{props.name}</span>
+				<div className={styles.containerText}>
+					<span className={styles.symbol}>{props.symbol}</span>
+					<span className={styles.nameOfCurrency}>{props.name}</span>
+				</div>
 			</div>
 			<div className={styles.thirdColumn}>${Number(props.current_price).toFixed(2)}</div>
 			<div className={styles.fourthColumn}>

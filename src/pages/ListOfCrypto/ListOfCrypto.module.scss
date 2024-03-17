@@ -1,6 +1,7 @@
 .ListOfCrypto {
     background: linear-gradient(0deg, #1a1d2a, #1c1f2e), #ebeef6;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100vw;
     padding: 20px 9rem;
 
@@ -29,5 +30,39 @@
             width: 20%;
             text-align: right;
         }
+    }
+}
+
+@media (max-width: 1090px) {
+    .ListOfCrypto {
+        padding: 20px 6rem;
+
+        .ul {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 750px) {
+    .ListOfCrypto {
+        padding: 20px 3rem;
+
+
+        .tableHeader {
+            .firstColumn {
+                width: 15%;
+            }
+
+            .thirdColumn {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .ListOfCrypto {
+        padding: 20px 1rem;
     }
 }
