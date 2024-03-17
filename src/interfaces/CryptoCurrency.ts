@@ -1,7 +1,8 @@
 export interface CryptoCurrency {
     id: string;
-    rank: string;
+    market_cap_rank: string;
 	symbol: string;
 	name: string;
-	priceUsd: string;
+	current_price: string;
+	image: string
 }

@@ -8,19 +8,26 @@ const ListOfCrypto = () => {
 	const [cryptoTop10, setCryptoTop10] = useState<CryptoCurrency[]>([]);
 	const [loading, setLoading] = useState(false);
 
+	const getCryptoTop10 = async () => {
+		const response = await getCrypto();
+		if (!response) return;
+		setCryptoTop10(response);
+	};
+
 	useEffect(() => {
 		setLoading(true);
-
-		getCrypto()
-			.then((response) => {
-				setLoading(false);
-
-				if (!response) return;
-
-				setCryptoTop10(response.data);
-			})
-			.catch((error) => {});
+		getCryptoTop10();
+		setLoading(false);
 	}, []);
+
+	// Effect to make request each 10s to update the currencyCrypto value
+	// useEffect(() => {
+	// 	const idInterval = setInterval(() => {
+	// 		getCryptoTop10();
+	// 	}, 10000);
+
+	// 	return () => clearInterval(idInterval);
+	// });
 
 	return (
 		<div className={styles.ListOfCrypto}>
