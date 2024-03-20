@@ -32,6 +32,9 @@ const ListOfCrypto = () => {
 
 	return (
 		<div className={styles.ListOfCrypto}>
+			<h1 className={styles.title}>
+				<span style={{ textDecoration: "underline" }}>Top 10</span> criptomoedas por capitalização de mercado
+			</h1>
 			<ul className={styles.ul}>
 				<li className={styles.tableHeader}>
 					<div className={styles.firstColumn}>Rank</div>
@@ -41,8 +44,13 @@ const ListOfCrypto = () => {
 				</li>
 				{!loading &&
 					cryptoTop10.map((item) => (
-						<Link key={item.id} state={{ ...item }} to={{ pathname: "/details" }} style={{ textDecoration: "none" }}>
-							<ListItem  {...item} />
+						<Link
+							key={item.id}
+							state={{ ...item }}
+							to={{ pathname: "/details" }}
+							style={{ textDecoration: "none" }}
+						>
+							<ListItem {...item} />
 						</Link>
 					))}
 			</ul>
