@@ -3,10 +3,11 @@
     min-height: 100vh;
     height: 100%;
     width: 100vw;
+    padding-top: calc(81px + 40px);
 
     .card {
         margin: 0 auto;
-        max-width: 750px;
+        width: 800px;
 
         .header {
             display: flex;
@@ -109,7 +110,7 @@
                 }
             }
 
-            .greater{
+            .greater {
                 margin: 0 10px;
             }
         }
@@ -118,13 +119,34 @@
 
 @media (max-width: 1090px) {
     .DetailsOfCrypto {
-        padding: 20px 4rem;
+        padding: 20px 6rem;
+        padding-top: calc(81px + 40px);
+
+        .card {
+            width: 100%;
+
+            .header {
+                .containerLeft {
+
+                    .containerCoin {
+                        .coinImg {
+                            width: 45px;
+                        }
+
+                        .coinName {
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 750px) {
     .DetailsOfCrypto {
-        padding: 20px 2rem;
+        padding: 20px 3rem;
+        padding-top: calc(81px + 40px);
 
         .header {
             flex-direction: column;
@@ -140,6 +162,7 @@
 @media (max-width: 520px) {
     .DetailsOfCrypto {
         padding: 20px 1rem;
+        padding-top: calc(81px + 40px);
 
         .card {
             .header {
@@ -156,6 +179,14 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    .DetailsOfCrypto {
+        .card {
+            width: 1000px;
         }
     }
 }

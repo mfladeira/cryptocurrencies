@@ -1,7 +1,9 @@
 .ListOfCrypto {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 20px 9rem;
+    padding-top: calc(81px + 40px);
 
     .ul {
         width: 800px;
@@ -44,6 +46,7 @@
 @media (max-width: 1090px) {
     .ListOfCrypto {
         padding: 20px 6rem;
+        padding-top: calc(81px + 40px);
 
         .ul {
             width: 100%;
@@ -61,6 +64,7 @@
 @media (max-width: 750px) {
     .ListOfCrypto {
         padding: 20px 3rem;
+        padding-top: calc(81px + 40px);
 
         .tableHeader {
             .firstColumn {
@@ -82,5 +86,15 @@
 @media (max-width: 520px) {
     .ListOfCrypto {
         padding: 20px 1rem;
+        padding-top: calc(81px + 40px);
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .ListOfCrypto {
+        .ul {
+            width: 1000px;
+        }
     }
 }

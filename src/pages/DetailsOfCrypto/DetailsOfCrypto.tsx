@@ -46,7 +46,7 @@ const DetailsOfCrypto = () => {
 	};
 
 	return (
-		<div className={styles.DetailsOfCrypto}>
+		<main className={styles.DetailsOfCrypto}>
 			<section className={styles.card}>
 				<p className={styles.linkToGoBack}>
 					<Link to={"/"}>Página inicial</Link> <span className={styles.greater}>{">"}</span> Valor do{" "}
@@ -101,7 +101,7 @@ const DetailsOfCrypto = () => {
 					</ResponsiveContainer>
 				</section>
 			</section>
-		</div>
+		</main>
 	);
 };
 

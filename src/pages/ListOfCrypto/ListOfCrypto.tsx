@@ -31,7 +31,7 @@ const ListOfCrypto = () => {
 	// });
 
 	return (
-		<div className={styles.ListOfCrypto}>
+		<main className={styles.ListOfCrypto}>
 			<h1 className={styles.title}>
 				<span style={{ textDecoration: "underline" }}>Top 10</span> criptomoedas por capitalização de mercado
 			</h1>
@@ -54,8 +54,8 @@ const ListOfCrypto = () => {
 						</Link>
 					))}
 			</ul>
-		</div>
-	);
+		</main>
+	)
 };
 
 export default ListOfCrypto;
