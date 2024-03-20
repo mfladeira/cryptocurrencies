@@ -29,11 +29,11 @@ const getMarketChartOfCrypto = async (idCrypto: string): Promise<Array<CryptoMar
         const marketChart = await api.get<{ prices: Array<CryptoMarketChart> }>(`${idCrypto}/market_chart`, {
             params: {
                 vs_currency: 'usd',
-                days: 1
+                days: 2
             }
         })
 
-        return marketChart.data.prices;
+        return marketChart.data.prices.slice(0, 23);
     } catch (e) {
         console.log(e)
     }
