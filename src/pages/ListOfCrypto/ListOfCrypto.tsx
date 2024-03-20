@@ -3,6 +3,7 @@ import ListItem from "./components/ListItem";
 import { useEffect, useState } from "react";
 import { getCrypto } from "../../services/cryptoService";
 import { CryptoCurrency } from "../../interfaces/CryptoCurrency";
+import { Link } from "react-router-dom";
 
 const ListOfCrypto = () => {
 	const [cryptoTop10, setCryptoTop10] = useState<CryptoCurrency[]>([]);
@@ -38,7 +39,12 @@ const ListOfCrypto = () => {
 					<div className={styles.thirdColumn}>Preço</div>
 					<div className={styles.fourthColumn}>Ações</div>
 				</li>
-				{!loading && cryptoTop10.map((item) => <ListItem key={item.id} {...item} />)}
+				{!loading &&
+					cryptoTop10.map((item) => (
+						<Link key={item.id} state={{ ...item }} to={{ pathname: "/details" }} style={{ textDecoration: "none" }}>
+							<ListItem  {...item} />
+						</Link>
+					))}
 			</ul>
 		</div>
 	);

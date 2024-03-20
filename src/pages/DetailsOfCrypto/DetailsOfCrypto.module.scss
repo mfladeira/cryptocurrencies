@@ -1,0 +1,161 @@
+.DetailsOfCrypto {
+    padding: 20px 9rem;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+
+    .card {
+        margin: 0 auto;
+        max-width: 750px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+
+            .containerLeft {
+                .containerCoin {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+
+                    .coinImg {
+                        width: 55px;
+                    }
+
+                    .coinName {
+                        font-size: 30px;
+                        margin-left: 16px;
+                        font-weight: 700;
+                    }
+
+                    .coinSymbol {
+                        color: rgb(232 229 229 / 87%);
+                        font-weight: 300;
+                        margin-left: 5px;
+                        padding-top: 6px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .containerPrice {
+                    .coinPrice {
+                        font-size: 24px;
+                        padding-left: 14px;
+                    }
+
+                    .coinChangePercentage {
+                        margin-left: 5px;
+                        font-weight: 500;
+                    }
+
+                    .symbol24H {
+                        margin-left: 5px;
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .containerRight {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .field {
+                    margin-right: 10px;
+                    color: #bbbbbb;
+                }
+
+                span {
+                    font-weight: 500;
+                    text-align: left;
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        .graphic {
+            .tooltip {
+                background-color: #2B3139;
+                padding: 10px 15px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: space-between;
+                width: 200px;
+
+                .text {
+                    color: #bbbbbb;
+                    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+                    margin: 4px 0;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .linkToGoBack {
+            margin-bottom: 55px;
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+
+            >a {
+                color: rgba(203, 202, 202, 0.87);
+                text-decoration: none;
+
+                &:hover {
+                    opacity: .6;
+                    transition: .3s;
+                }
+            }
+
+            .greater{
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1090px) {
+    .DetailsOfCrypto {
+        padding: 20px 4rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .DetailsOfCrypto {
+        padding: 20px 2rem;
+
+        .header {
+            flex-direction: column;
+
+            .containerRight {
+                padding-left: 14px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 520px) {
+    .DetailsOfCrypto {
+        padding: 20px 1rem;
+
+        .card {
+            .header {
+                .containerLeft {
+
+                    .containerCoin {
+                        .coinImg {
+                            width: 40px;
+                        }
+
+                        .coinName {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
