@@ -155,7 +155,6 @@
                 padding-left: 14px;
             }
         }
-
     }
 }
 
@@ -163,6 +162,10 @@
     .DetailsOfCrypto {
         padding: 20px 1rem;
         padding-top: calc(81px + 40px);
+
+        tspan {
+            font-size: 13px !important;
+        }
 
         .card {
             .header {
