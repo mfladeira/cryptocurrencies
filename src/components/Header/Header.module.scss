@@ -1,0 +1,71 @@
+.Header {
+    padding: 20px 9rem;
+    width: 100%;
+    background-color: rgb(0 0 0 / 15%);
+    border-bottom: 1px solid #f6f0ea1f;
+    position: absolute;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 800px;
+
+        .coingecko {
+            width: 130px;
+        }
+
+        .containerRight {
+            display: flex;
+            align-items: center;
+
+            .btnConnect {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+                &:hover {
+                    opacity: .6;
+                    transition: .3s;
+                }
+            }
+
+            .metamask {
+                width: 28px;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1090px) {
+    .Header {
+        padding: 20px 6rem;
+
+        .container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .Header {
+        padding: 20px 3rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .Header {
+        padding: 20px 1rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .Header {
+        .container {
+            width: 1000px;
+        }
+    }
+}
