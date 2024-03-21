@@ -1,9 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const initialState = {
+export interface MetaMaskState {
+    account: {
+        id: string,
+        balance: string
+    }
+}
+const initialState: MetaMaskState = {
     account: {
         id: '',
-        balance: 0
+        balance: ''
     }
 }
 
@@ -11,7 +17,7 @@ const metaMaskSlice = createSlice({
     name: 'metaMask',
     initialState,
     reducers: {
-        login(state, action) {
+        login(state, action: PayloadAction<{ id: string, balance: string }>) {
             state.account = action.payload;
         }
     }

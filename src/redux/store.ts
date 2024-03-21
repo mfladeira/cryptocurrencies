@@ -8,3 +8,5 @@ const store = configureStore({
 });
 
 export default store;
+// Infer the `RootState` types from the store itself
+export type RootState = ReturnType<typeof store.getState>

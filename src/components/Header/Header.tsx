@@ -4,9 +4,10 @@ import coingecko from "../../assets/coingecko.svg";
 import Web3 from "web3";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/metaMaskSlice";
+import { RootState } from "../../redux/store";
 
 const Header = () => {
-	const account  = useSelector((state: any) => state.metaMask.account);
+	const account = useSelector((state: RootState) => state.metaMask.account);
 	const dispatch = useDispatch();
 
 	const connectToMetaMask = async () => {
@@ -19,10 +20,9 @@ const Header = () => {
 				const accounts = await web3.eth.getAccounts();
 
 				const balance = await web3.eth.getBalance(accounts[0]);
-				
+
 				const balanceInEther = web3.utils.fromWei(balance, "ether");
-				console.log(console.log(balanceInEther));
-				
+
 				dispatch(login({ id: accounts[0], balance: balanceInEther }));
 			} catch (error) {
 				console.error("Error connecting to MetaMask:", error);
