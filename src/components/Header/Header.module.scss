@@ -4,6 +4,8 @@
     background-color: rgb(0 0 0 / 15%);
     border-bottom: 1px solid #f6f0ea1f;
     position: absolute;
+    min-height: 95px;
+    display: flex;
 
     .container {
         display: flex;
