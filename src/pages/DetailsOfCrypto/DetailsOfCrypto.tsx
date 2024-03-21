@@ -39,7 +39,7 @@ const DetailsOfCrypto = () => {
 					<div>
 						<p className={styles.text}>{new Date(data[0]).toLocaleDateString()}</p>
 						<p className={styles.text} style={{ fontWeight: 700 }}>
-							${data[1].toFixed(2)}
+							${data[1] < 1.5 ? data[1] : data[1].toFixed(2)}
 						</p>
 					</div>
 					<div>
