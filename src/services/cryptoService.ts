@@ -35,7 +35,7 @@ const getMarketChartOfCrypto = async (idCrypto: string): Promise<Array<CryptoMar
 
         return marketChart.data.prices.slice(0, 23);
     } catch (e) {
-        console.log(e)
+        console.error(e)
     }
 }
 
