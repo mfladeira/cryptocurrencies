@@ -28,14 +28,6 @@ const ListOfCrypto = () => {
 		};
 	}, []);
 
-	// Effect to make request each 10s to update the currencyCrypto value
-	// useEffect(() => {
-	// 	const idInterval = setInterval(() => {
-	// 		getCryptoTop10();
-	// 	}, 10000);
-
-	// 	return () => clearInterval(idInterval);
-	// });
 
 	return (
 		<main className={styles.ListOfCrypto}>
