@@ -9,6 +9,10 @@
         width: 800px;
         margin: 0 auto;
         margin-top: 40px;
+
+        animation-name: slowAppear;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
     }
 
     .tableHeader {
@@ -96,5 +100,27 @@
         .ul {
             width: 1000px;
         }
+    }
+}
+
+@keyframes slowAppear {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
