@@ -10,6 +10,7 @@ import { formatTimestampToTime } from "../../helpers/formatTimestampToTime";
 const DetailsOfCrypto = () => {
 	let state = useLocation().state as CryptoCurrency;
 	const [marketChart, setMarketChart] = useState<Array<CryptoMarketChart>>();
+	let didInit = false;
 
 	const getMarketChart = async () => {
 		const marketChart = await getMarketChartOfCrypto(state.id);
@@ -17,7 +18,13 @@ const DetailsOfCrypto = () => {
 	};
 
 	useEffect(() => {
+		if (didInit) return;
+
 		getMarketChart();
+
+		return () => {
+			didInit = true;
+		};
 	}, []);
 
 	const CustomTooltip: React.FC<{ active: boolean; payload: Array<{ payload: CryptoMarketChart }> | undefined }> = ({

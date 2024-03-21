@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const ListOfCrypto = () => {
 	const [cryptoTop10, setCryptoTop10] = useState<CryptoCurrency[]>([]);
 	const [loading, setLoading] = useState(false);
+	let didInit = false;
 
 	const getCryptoTop10 = async () => {
 		const response = await getCrypto();
@@ -16,9 +17,15 @@ const ListOfCrypto = () => {
 	};
 
 	useEffect(() => {
+		if (didInit) return;
+
 		setLoading(true);
 		getCryptoTop10();
 		setLoading(false);
+
+		return () => {
+			didInit = true;
+		};
 	}, []);
 
 	// Effect to make request each 10s to update the currencyCrypto value
@@ -55,7 +62,7 @@ const ListOfCrypto = () => {
 					))}
 			</ul>
 		</main>
-	)
+	);
 };
 
 export default ListOfCrypto;
