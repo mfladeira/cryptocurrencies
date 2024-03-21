@@ -6,9 +6,10 @@ import { getMarketChartOfCrypto } from "../../services/cryptoService";
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useEffect, useState } from "react";
 import { formatTimestampToTime } from "../../helpers/formatTimestampToTime";
+import { CryptoMarketChart } from "../../interfaces/CryptoMarketChart";
 
 const DetailsOfCrypto = () => {
-	let state = useLocation().state as CryptoCurrency;
+	const state = useLocation().state as CryptoCurrency;
 	const [marketChart, setMarketChart] = useState<Array<CryptoMarketChart>>();
 	let didInit = false;
 
